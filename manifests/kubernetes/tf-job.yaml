@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tf-train
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: trainer
+        image: <ACR_LOGIN_SERVER>/<IMAGE_NAME>:<IMAGE_TAG>
+        command: ["python","-c","import tensorflow as tf; print(tf.__version__); print('hello aks')"]
+        resources:
+          requests:
+            cpu: "1"
+            memory: "2Gi"
+          limits:
+            cpu: "2"
+            memory: "4Gi"
+      imagePullSecrets: []

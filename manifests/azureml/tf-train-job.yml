@@ -1,0 +1,14 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+display_name: tf-train
+experiment_name: tf-train
+code: .
+command: >-
+  python -c "import tensorflow as tf; print(tf.__version__); print('hello azure ml');"
+environment:
+  image: <ACR_LOGIN_SERVER>/<IMAGE_NAME>:<IMAGE_TAG>
+compute: azureml:cpu-cluster
+resources:
+  instance_count: 1
+limits:
+  timeout: 3600

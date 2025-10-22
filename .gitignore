@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter/Notebook
+.ipynb_checkpoints/
+
+# macOS & Windows
+.DS_Store
+Thumbs.db
+
+# VSCode & IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs & runtime
+*.log
+*.sqlite3
+*.db
+
+# Docker
+*.tar
+*.bak
+
+# Node (if used for tooling)
+node_modules/
+
+# Terraform/Infra artifacts (not included in this starter)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Coverage/Reports
+.coverage
+htmlcov/
+.coverage.*
+.pytest_cache/
+
+# Temporary
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# Secrets (do not commit; keep empty or use key vault)
+secrets/
